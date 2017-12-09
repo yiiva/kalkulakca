@@ -1,4 +1,5 @@
 from PyQt5 import QtWidgets, uic
+import pkg_resources
 
 def main():
     #vytvoreni aplikace a okna
@@ -6,7 +7,7 @@ def main():
     window = QtWidgets.QDialog()
 
     #nacteni ovladatek
-    with open ('kalkulacka/kalkulacka.ui', encoding='utf-8') as soubor:
+    with pkg_resources.resource_stream ('kalkulacka', 'kalkulacka.ui') as soubor:
         uic.loadUi(soubor, window)
 
     sb_operand1 = window.findChild(QtWidgets.QDoubleSpinBox, 'sb_operand1')
