@@ -16,14 +16,13 @@ script:
   - python3 -m pytest -vv test_kalkulacka/
   - pyinstaller __main__.py -n kalkulacka-app
       --exclude-module tkinter
-      --add-data dama/resources:dama/resources
+      --add-data kalkulacka:kalkulacka
       -F -w
 
 deploy:
     provider: releases
     api_key:
-        secure:
-            secure: aWni6KsHPs3iro6apvjKvY+t0qi9aQRc3mM1xKn4lKDifmeorCyFB/1kUyrckoPQtUJ0fx4pki6smmf8AGtGUTv3NVpksKfhsp7Ggz34Sx11FGru4PV99e0dFadhcQRBP7BpqaBnx3vLJq2qf6A/bdvsvVM1EY8a/uEO8LRV+KV74/Fg5m+5G/+w5iGWTUOR77Dk2cNr4xrfOg95r6trW7sVOM5sF6d8H5Du+PLbwTdxqY+h2Pc5B1/NDZ6PmBfUtyOPNOgmTU17oSlCzHq5SwVu/n03w4vysApsxM3L93+kGtaCszrH0BYaXimaImUpLhjlWEHZn+m4PaaZQHjB4UdYc6ZB0YXy5nEaHowSgFw/caxBVMxrH+evwDOsajRZgrBvibDFVPs74dcfSBrf7/Upqwk4naoBg1x6a6QWCqY/Vh8hRxVeePVXaZJe4jWFLqPMaJKWgMxmNJLZG0XitVazLcVDBei6JBcSzQhCzMt2AyOfTigD3tV/yPZhQedY/6WRBmFSAPF4Bc6teVCvDRFy9zuKHAJM0NVrCJKH35Y91W/sgz0uOccTDA6wpKfZBUxIgqrdOfXylpKlhyFszQzpng6tUFuJiD9Hl83YBICoI7cz8aXNFydZHK06beK+nQ8NdVbZZ0eNehM55a7uC2uWtw4WKc7KdFwXIgUfwaU=
+        secure: aWni6KsHPs3iro6apvjKvY+t0qi9aQRc3mM1xKn4lKDifmeorCyFB/1kUyrckoPQtUJ0fx4pki6smmf8AGtGUTv3NVpksKfhsp7Ggz34Sx11FGru4PV99e0dFadhcQRBP7BpqaBnx3vLJq2qf6A/bdvsvVM1EY8a/uEO8LRV+KV74/Fg5m+5G/+w5iGWTUOR77Dk2cNr4xrfOg95r6trW7sVOM5sF6d8H5Du+PLbwTdxqY+h2Pc5B1/NDZ6PmBfUtyOPNOgmTU17oSlCzHq5SwVu/n03w4vysApsxM3L93+kGtaCszrH0BYaXimaImUpLhjlWEHZn+m4PaaZQHjB4UdYc6ZB0YXy5nEaHowSgFw/caxBVMxrH+evwDOsajRZgrBvibDFVPs74dcfSBrf7/Upqwk4naoBg1x6a6QWCqY/Vh8hRxVeePVXaZJe4jWFLqPMaJKWgMxmNJLZG0XitVazLcVDBei6JBcSzQhCzMt2AyOfTigD3tV/yPZhQedY/6WRBmFSAPF4Bc6teVCvDRFy9zuKHAJM0NVrCJKH35Y91W/sgz0uOccTDA6wpKfZBUxIgqrdOfXylpKlhyFszQzpng6tUFuJiD9Hl83YBICoI7cz8aXNFydZHK06beK+nQ8NdVbZZ0eNehM55a7uC2uWtw4WKc7KdFwXIgUfwaU=
     file: dist/*
     skip_cleanup: true
     on:
